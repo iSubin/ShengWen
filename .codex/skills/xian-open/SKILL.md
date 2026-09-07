@@ -123,6 +123,12 @@ open -> verify -> gate -> close
 
 不得新增 phase、schema、scheduler、daemon、persistent authority、generalized recovery 或 canonical Scope object 来实现本规则。
 
+## 首次 Review 的配置准备
+
+仅当 current policy 要求 formal Review 时，在首次调用前核对项目选择的持久 Reviewer profile 与自动 Review（包括 contract-patch 内部调用）一致。CLI override 不等于持久配置；不要在第一次显式调用后假定后续无参数调用会沿用它。使用现役项目或 change-local policy 输入及 parser，保持既有 logical/physical Reviewer，不改旧 session 或 Review facts；通用 Pack 不指定 provider。
+
+不要求 formal Review 的 ordinary/quick 不新增 Reviewer 配置、Spec Review 或固定表单。已有 parked/capture 必须先确认真实 Scope 和完整设计能由当前支持路径物化；不能把 capture 的默认 diff-check 当行为证据。准备失败按具体 owner 修正，不先 seal 再猜合同。
+
 ## 确定性工具
 
 - `xian-harness status --target <target-project> --json`

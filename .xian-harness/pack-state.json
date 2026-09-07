@@ -6,9 +6,9 @@
     "manifestName": "xian-harness-pack",
     "manifestVersion": 1,
     "fileCount": 133,
-    "contentHash": "9d31109c3ed3980fc66c9a4334ebb8d8f61665c6cf9e3a6e7ffc24a70d59b136"
+    "contentHash": "ceb17b3b96bc87ef8c7688b8497261e779f2ccafa93bb548a1505017d6aa01e3"
   },
-  "updatedAt": "2026-08-31T06:45:37+08:00",
+  "updatedAt": "2026-09-08T04:33:11+08:00",
   "files": [
     {
       "path": ".claude/commands/README.md",
@@ -433,9 +433,9 @@
     {
       "path": ".codex/skills/xian-build/SKILL.md",
       "sourcePath": "base/.codex/skills/xian-build/SKILL.md",
-      "sourceHash": "46f2d7d5ef321f723c9a508b402b48bae09de3d57990120ad0290e32b70fd9f4",
-      "targetHash": "46f2d7d5ef321f723c9a508b402b48bae09de3d57990120ad0290e32b70fd9f4",
-      "installedAt": "2026-08-26T20:38:57+08:00",
+      "sourceHash": "a48fab6092a7de3dd801abb122ba22d75c6083f0d2551ecce3536961c553e4f0",
+      "targetHash": "a48fab6092a7de3dd801abb122ba22d75c6083f0d2551ecce3536961c553e4f0",
+      "installedAt": "2026-09-08T04:33:11+08:00",
       "sourceMode": 420,
       "targetMode": 420,
       "tombstone": false
@@ -613,9 +613,9 @@
     {
       "path": ".codex/skills/xian-open/SKILL.md",
       "sourcePath": "base/.codex/skills/xian-open/SKILL.md",
-      "sourceHash": "94dc6708994070ac34cb1c9eb5cce0e9cfbf032cb80781a434b339737cca12bb",
-      "targetHash": "94dc6708994070ac34cb1c9eb5cce0e9cfbf032cb80781a434b339737cca12bb",
-      "installedAt": "2026-08-31T06:45:37+08:00",
+      "sourceHash": "18a5e8c0cce50967bbf6ebec2e28ecb4e58f924f18924d19fee7b64e0050046c",
+      "targetHash": "18a5e8c0cce50967bbf6ebec2e28ecb4e58f924f18924d19fee7b64e0050046c",
+      "installedAt": "2026-09-08T04:33:11+08:00",
       "sourceMode": 420,
       "targetMode": 420,
       "tombstone": false
@@ -823,9 +823,9 @@
     {
       "path": ".codex/skills/xian-spec/SKILL.md",
       "sourcePath": "base/.codex/skills/xian-spec/SKILL.md",
-      "sourceHash": "055596af3d80077b2f8bbd6ddc1c2a197f251358c435e7d777eea3231566b3f9",
-      "targetHash": "055596af3d80077b2f8bbd6ddc1c2a197f251358c435e7d777eea3231566b3f9",
-      "installedAt": "2026-08-31T06:45:37+08:00",
+      "sourceHash": "a59b0695d1cf46f7f5e615c3a284d672156b7a748e19111650e099c15036bd49",
+      "targetHash": "a59b0695d1cf46f7f5e615c3a284d672156b7a748e19111650e099c15036bd49",
+      "installedAt": "2026-09-08T04:33:11+08:00",
       "sourceMode": 420,
       "targetMode": 420,
       "tombstone": false
@@ -843,9 +843,9 @@
     {
       "path": ".codex/skills/xian-verify/SKILL.md",
       "sourcePath": "base/.codex/skills/xian-verify/SKILL.md",
-      "sourceHash": "444d6449d63aa7409838c78078d103cc61ce5483d0903725e2588d59e16628ec",
-      "targetHash": "444d6449d63aa7409838c78078d103cc61ce5483d0903725e2588d59e16628ec",
-      "installedAt": "2026-08-31T06:45:37+08:00",
+      "sourceHash": "e0eaaac10177b90de46e923fe48fe82377ca765c790ba7cc06fa947fda17dded",
+      "targetHash": "e0eaaac10177b90de46e923fe48fe82377ca765c790ba7cc06fa947fda17dded",
+      "installedAt": "2026-09-08T04:33:11+08:00",
       "sourceMode": 420,
       "targetMode": 420,
       "tombstone": false

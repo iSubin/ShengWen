@@ -83,6 +83,12 @@ description: Use when implementing approved tasks from change.md or legacy tasks
 - Major: preserve full audit evidence and do not shortcut gate, release, or archive.
 - 如果实现触及 schema、state-machine、gate、archive、pack、skill contracts、quality mechanisms、security、migrations 或广泛 runtime behavior，记录风险并在收口前按升级处理。
 
+## 独立验证环境准备
+
+每条 VC 的 shell 变量和工作目录不从上一条继承。优先使用项目已有 package prefix/cwd、锁定依赖和已有 venv 的明确解释器路径，以及精确目标文件；先低成本确认 runner、解释器和目标可用，再运行定向检查。不自动 pip/npm install，不用全量 pytest 或 cd/&&/变量拼接掩盖命令准入问题。缺环境如实返回失败，不把 Node fixture 当 Python venv 已通过。
+
+active Change、Review、Candidate 期间的其他写入或 commit 先按路径和 authority 归因协调；无真实并行不增加 worktree。metadata 修订不保证 blanket evidence reuse，必须消费现役 freshness。准备指引是现有步骤内的检查，不增加 phase、表单或新 authority。
+
 ## 确定性工具
 
 - `git status --short --branch`

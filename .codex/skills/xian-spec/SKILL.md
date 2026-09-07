@@ -79,6 +79,14 @@ External artifacts 只组织 authoring。不得复制第二份 proposal、design
 5. Note affected modules, data, permissions, deployment, rollback, and observability concerns. For an unverified external transaction, idempotency, uniqueness, delivery, or rollback assumption, require a probe, a design that removes the dependency, or an explicit residual-risk decision before Spec acceptance.
 6. Update `change.md`; for legacy/audit changes, update `proposal.md`, `acceptance-criteria.md`, or Xian spec contract delta specs.
 
+## 完整草案与适用准入
+
+首次 seal/Review 前一起核对 requirement.nonGoals、sourceDelta、真实 Scope、授权来源、TASK/AC/VC 双向映射、唯一 IDs 和独立命令。业务 AC 写可观察结果，不冻结 shell 变量复用或实现顺序；Scope、Candidate Workset 与 mandatory preflight 保持唯一机器边界，不复制为产品 AC，也不让 verificationPlan 递归调用当前 Change guard/verify/lifecycle。
+
+先区分实际 lifecycle/freeze 和 directCompile 对应的调用分支（现役 requiresReviewedPromotion）；仅适用 reviewed promotion 时检查其 admission。compile pass 不等于实际 admission，但未进入分支的失败也不是当前调用 blocker。prospective owner self-binding 使用当前 Runtime 所需 patch identity 和 canonical path，保留旧授权，不安装固定 patch id。
+
+当前没有 public prepare/dry-run：contract-patch 是写入口，不把它当零写预检。inspect 与 verify plan 只证明其声明范围；外部项目不能被要求导入可变 self-hosted 私有 TS。自举开发确有必要时，可在 Candidate 外用当前已提交来源的既有 prepare API 做隔离只读探针；它不是新公共工具或接受事实。公开能力不足时明确人工草案检查与正式 admission 的区别，不能伪称全自动预检。
+
 ## 确定性工具
 
 - `xian-harness change inspect <change-id> --target <target-project> --json`

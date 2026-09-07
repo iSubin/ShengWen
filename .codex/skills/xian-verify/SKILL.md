@@ -55,6 +55,12 @@ Change Runtime contract revision 进入 verify 时，`xian-verify` 只消费 fro
 
 每个 change attempt 最多启动一次 Formal Verify 或 Quick Verify；这里的 attempt 绑定唯一 ActionAttempt identity。runner 启动后的任何 non-pass 只 terminalize 该 immutable ActionAttempt；不得机械重跑、调 timeout、覆盖 evidence 或手写 successor。后续动作必须消费 current machine `failureRecovery.decision`：`prepare-new-candidate` 在 same Business Change 内形成 meaningful Candidate delta；`retry-same-candidate` 仅用于获机器授权的 environment interruption；`suspend-for-incident-repair` 仅在完整 current classifier/admission proof 下授权 repository-baseline 的 `incident-repair` relation；只有 `business-boundary classifier` 给出 `terminalize-business-change` 时才可终结或替换 Business Change。
 
+## 环境与证据的准确边界
+
+每条 VC 是独立执行环境：前一条 export、cd 或 shell 局部变量不传到下一条。命令应自行指定已有解释器、package cwd/prefix 与定向目标；缺失 runner 不自动安装。不要用命令链绕过 safety/admission，也不要以旧 metadata 刷新冒充 fresh evidence。
+
+文本契约/镜像测试只证明指引存在与可安装；生产 runner/compiler 的临时 fixture 只证明对应命令环境和拒绝行为，不能推出 Host 已遵循指引、真实 Python venv 可用或 ANM E2E 完成。真实业务返工减少仍待观察，不给低风险任务附加固定样本、Review 或评分门槛。Verify plan 检查应包含当前 risk 所要求的 mandatory overlays，不只读取手写 VC 清单。
+
 ## 确定性工具
 
 - small hotfix targeted verification: `xian-harness quick-verify <change-id> --target <target-project> --command "<command>" --json`
